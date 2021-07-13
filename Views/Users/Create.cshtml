@@ -1,0 +1,57 @@
+﻿@model Assignment.Models.Users
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class=" text-center mt-5 ">
+        <h1>Bootstrap Contact Form</h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form id="contact-form" asp-action="Create" role="form">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label asp-for="Name" for="form_name"></label> <input asp-for="Name" id="form_name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Name is required."> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label asp-for="Phone" for="form_lastname"></label> <input asp-for="Phone" id="form_lastname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Phone is required."> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label asp-for="Email" for="form_email"></label> <input asp-for="Email" id="form_email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label asp-for="Password"></label> <input asp-for="Password" class="form-control" required="required" data-error="Valid email is required."> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="submit" value="Save" class="btn btn-success btn-send pt-2 btn-block " />
+                                            <a asp-action="Index" class="btn btn-success btn-send pt-2 btn-block ">Back to List</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+    </div>
+</div>
+
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@
